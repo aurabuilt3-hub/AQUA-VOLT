@@ -10,7 +10,7 @@ from app.services.risk_agent import analyze_risk_profile, risk_output_to_agent_a
 from app.services.optimizer import optimize_load_allocation
 from app.services.safety import validate_action_plan_safety
 from app.governance.audit import audit_logger
-from typing import List
+from typing import List, Optional, Any
 
 def build_coordinated_action_plan(
     event: IoTEvent,

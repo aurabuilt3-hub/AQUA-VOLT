@@ -15,10 +15,11 @@ origins = [
     "http://127.0.0.1:5173",
 ]
 
-# Enable CORS for local frontend development
+# Enable CORS for local frontend development and Vercel deployments
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
