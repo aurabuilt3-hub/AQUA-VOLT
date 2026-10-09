@@ -1,6 +1,31 @@
 import { IoTEvent, ActionPlan, ApprovalRequest, ExecutionResult, AuditLogEntry, CopilotQuery, CopilotResponse, FarmState, CoordinatedActionPlan, AIHealthStatus, AnalyzeRequestPayload, UnifiedAnalysisResponse } from '../types';
 
-const API_BASE = '/api';
+function getApiBase(): string {
+  // 1. Check if an explicit backend URL is provided via Vite environment variables
+  const metaEnv = typeof import.meta !== 'undefined' ? (import.meta as any).env : undefined;
+  const envUrl = (
+    metaEnv?.VITE_API_URL ||
+    metaEnv?.VITE_BACKEND_URL ||
+    ''
+  ).trim();
+
+  if (envUrl) {
+    // Strip trailing slashes
+    const cleanUrl = envUrl.replace(/\/+$/, '');
+    // Ensure /api suffix is present without duplication
+    return cleanUrl.endsWith('/api') ? cleanUrl : `${cleanUrl}/api`;
+  }
+
+  // 2. In production builds (e.g. deployed on Vercel), default to the deployed backend
+  if (metaEnv?.PROD) {
+    return 'https://aqua-volt-rouge.vercel.app/api';
+  }
+
+  // 3. In local development, use relative '/api' which Vite proxies to localhost:8000
+  return '/api';
+}
+
+export const API_BASE = getApiBase();
 
 export async function analyzeOperationalInput(payload: AnalyzeRequestPayload): Promise<UnifiedAnalysisResponse> {
   const res = await fetch(`${API_BASE}/analyze`, {
