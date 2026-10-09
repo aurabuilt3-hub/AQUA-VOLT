@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 120" width="1000" height="120" fill="none">
+  <defs>
+    <!-- Sky Gradient -->
+    <linearGradient id="hSkyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#BAE6FD" stop-opacity="0.85" />
+      <stop offset="50%" stop-color="#E0F2FE" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#CCFBF1" stop-opacity="0.45" />
+    </linearGradient>
+
+    <!-- Sun Glow Gradient -->
+    <linearGradient id="hSunGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#FDE047" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Upper Nursery Pond Gradient -->
+    <linearGradient id="hUpperPond" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.75" />
+      <stop offset="50%" stop-color="#0EA5E9" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#14B8A6" stop-opacity="0.75" />
+    </linearGradient>
+
+    <!-- Main Grow-out Pond Gradient (Vibrant Aqua & Deep Teal) -->
+    <linearGradient id="hMainPond" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.8" />
+      <stop offset="35%" stop-color="#0EA5E9" stop-opacity="0.88" />
+      <stop offset="70%" stop-color="#0284C7" stop-opacity="0.92" />
+      <stop offset="100%" stop-color="#0F766E" stop-opacity="0.88" />
+    </linearGradient>
+
+    <!-- Embankment / Dyke Berm -->
+    <linearGradient id="hDyke" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A7F3D0" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#5EEAD4" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#2DD4BF" stop-opacity="0.75" />
+    </linearGradient>
+
+    <!-- Solar PV Panels (Deep crystalline silicon blue) -->
+    <linearGradient id="hSolarPV" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.98" />
+      <stop offset="40%" stop-color="#0369A1" stop-opacity="0.98" />
+      <stop offset="100%" stop-color="#082F49" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+
+  <g>
+    <!-- Sky backdrop -->
+    <rect x="0" y="0" width="1000" height="120" fill="url(#hSkyGrad)" />
+
+    <!-- Distant Coastline Mountain Silhouettes -->
+    <path d="M 0,55 Q 360,32 500,44 T 720,38 Q 840,30 1000,42 L 1000,120 L 0,120 Z" fill="#0D9488" fill-opacity="0.2" />
+    <path d="M 0,60 Q 500,38 640,48 T 860,42 L 1000,46 L 1000,120 L 0,120 Z" fill="#0F766E" fill-opacity="0.25" />
+
+    <!-- Morning Sun and Glow -->
+    <circle cx="890" cy="24" r="38" fill="url(#hSunGlow)" />
+    <circle cx="890" cy="24" r="15" fill="#FEF08A" fill-opacity="0.9" />
+    <circle cx="890" cy="24" r="7" fill="#FFFFFF" fill-opacity="0.95" />
+
+    <!-- Mangrove / Coconut Palm Silhouettes on Embankment -->
+    <g fill="#0F766E" fill-opacity="0.45">
+      <path d="M 740,54 Q 741,36 746,33 Q 743,42 752,37 Q 746,47 755,49 Q 747,51 744,56 Z" />
+      <path d="M 770,52 Q 771,32 777,29 Q 773,40 783,34 Q 777,45 786,47 Q 778,49 775,54 Z" />
+      <path d="M 940,46 Q 941,28 946,25 Q 943,35 952,30 Q 946,40 955,42 Q 947,44 944,48 Z" />
+      <path d="M 965,45 Q 966,27 971,24 Q 968,34 976,29 Q 971,39 980,41 Q 972,43 969,47 Z" />
+    </g>
+
+    <!-- Upper Nursery Aquaculture Basin (Perspective) -->
+    <polygon points="0,62 970,46 1000,60 0,74" fill="url(#hUpperPond)" stroke="#5EEAD4" stroke-width="1" />
+
+    <!-- Dividing Dyke / Embankment Walkway -->
+    <polygon points="0,73 990,58 1000,65 0,80" fill="url(#hDyke)" stroke="#2DD4BF" stroke-width="1" />
+
+    <!-- Main Grow-Out Pond Basin (Deep Perspective Water Body) -->
+    <polygon points="0,79 1000,64 1000,120 0,120" fill="url(#hMainPond)" />
+
+    <!-- Pond Edge Shimmer Lines -->
+    <path d="M 0,83 L 990,69" stroke="#99F6E4" stroke-width="1.5" stroke-opacity="0.75" />
+    <path d="M 0,118 L 1000,118" stroke="#0D9488" stroke-width="2" stroke-opacity="0.45" />
+
+    <!-- Solar PV Canopy Array on Embankment (Hybrid Farm) -->
+    <g transform="translate(820, 20)">
+      <!-- Mounting Pylons -->
+      <line x1="20" y1="20" x2="20" y2="34" stroke="#0F766E" stroke-width="2" />
+      <line x1="70" y1="14" x2="70" y2="28" stroke="#0F766E" stroke-width="2" />
+      <line x1="120" y1="8" x2="120" y2="22" stroke="#0F766E" stroke-width="2" />
+      <line x1="160" y1="4" x2="160" y2="18" stroke="#0F766E" stroke-width="2" />
+      <!-- Solar Panels Surface (Perspective Polygon) -->
+      <polygon points="0,18 160,2 178,18 18,34" fill="url(#hSolarPV)" stroke="#38BDF8" stroke-width="1.5" />
+      <!-- Grid Panel Divisions -->
+      <line x1="32" y1="15" x2="50" y2="31" stroke="#7DD3FC" stroke-width="1" opacity="0.9" />
+      <line x1="64" y1="11" x2="82" y2="27" stroke="#7DD3FC" stroke-width="1" opacity="0.9" />
+      <line x1="96" y1="8" x2="114" y2="24" stroke="#7DD3FC" stroke-width="1" opacity="0.9" />
+      <line x1="128" y1="5" x2="146" y2="21" stroke="#7DD3FC" stroke-width="1" opacity="0.9" />
+      <line x1="9" y1="26" x2="169" y2="10" stroke="#7DD3FC" stroke-width="1" opacity="0.9" />
+      <!-- Specular Solar Flare Highlight -->
+      <circle cx="80" cy="18" r="3.5" fill="#FFFFFF" />
+      <line x1="72" y1="18" x2="88" y2="18" stroke="#FFFFFF" stroke-width="1.5" />
+      <line x1="80" y1="10" x2="80" y2="26" stroke="#FFFFFF" stroke-width="1.5" />
+    </g>
+
+    <!-- Upper Basin Paddlewheel Aerator (Staggered perspective) -->
+    <g transform="translate(640, 63)">
+      <!-- Pontoon Floats -->
+      <rect x="-12" y="-3" width="24" height="5" rx="2.5" fill="#042F2E" stroke="#5EEAD4" stroke-width="1" />
+      <!-- Motor Housing -->
+      <rect x="-4" y="-7" width="8" height="5" rx="1.5" fill="#0D9488" stroke="#CCFBF1" stroke-width="1" />
+      <!-- Water Spray Clouds -->
+      <ellipse cx="-14" cy="-4" rx="8" ry="4" fill="#F0FDFA" fill-opacity="0.95" />
+      <ellipse cx="14" cy="-4" rx="8" ry="4" fill="#F0FDFA" fill-opacity="0.95" />
+      <!-- Foaming Ripple Waves -->
+      <ellipse cx="0" cy="3" rx="30" ry="6.5" stroke="#FFFFFF" stroke-width="1.2" stroke-opacity="0.9" fill="none" />
+      <ellipse cx="0" cy="3" rx="48" ry="9.5" stroke="#7DD3FC" stroke-width="1" stroke-opacity="0.6" fill="none" />
+    </g>
+
+    <!-- Aerator 1 (Main Lower Pond, Center-Left) -->
+    <g transform="translate(480, 96)">
+      <!-- Pontoon Floats -->
+      <rect x="-20" y="-4" width="40" height="8" rx="4" fill="#042F2E" stroke="#5EEAD4" stroke-width="1.5" />
+      <!-- Motor & Drive Housing -->
+      <rect x="-7" y="-12" width="14" height="9" rx="2" fill="#0D9488" stroke="#CCFBF1" stroke-width="1.2" />
+      <!-- Aerator Splash Plumes -->
+      <ellipse cx="-24" cy="-5" rx="14" ry="6" fill="#F0FDFA" fill-opacity="0.95" />
+      <ellipse cx="24" cy="-5" rx="14" ry="6" fill="#F0FDFA" fill-opacity="0.95" />
+      <circle cx="0" cy="-8" r="4.5" fill="#E0F2FE" />
+      <!-- Active Spray Arcs -->
+      <path d="M -14,-7 Q -28,-18 -42,-4" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill="none" />
+      <path d="M 14,-7 Q 28,-18 42,-4" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill="none" />
+      <path d="M -8,-9 Q -20,-22 -32,-10" stroke="#BAE6FD" stroke-width="1.5" stroke-linecap="round" fill="none" />
+      <path d="M 8,-9 Q 20,-22 32,-10" stroke="#BAE6FD" stroke-width="1.5" stroke-linecap="round" fill="none" />
+      <!-- Concentric Oxygenating Ripple Waves -->
+      <ellipse cx="0" cy="5" rx="52" ry="11" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.85" fill="none" />
+      <ellipse cx="0" cy="5" rx="80" ry="16" stroke="#7DD3FC" stroke-width="1.3" stroke-opacity="0.7" fill="none" />
+      <ellipse cx="0" cy="5" rx="110" ry="21" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.45" fill="none" />
+    </g>
+
+    <!-- Aerator 2 (Main Lower Pond, Right-Center) -->
+    <g transform="translate(700, 92)">
+      <!-- Pontoon Floats -->
+      <rect x="-18" y="-4" width="36" height="8" rx="4" fill="#042F2E" stroke="#5EEAD4" stroke-width="1.5" />
+      <!-- Motor Housing -->
+      <rect x="-6" y="-11" width="12" height="8" rx="2" fill="#0D9488" stroke="#CCFBF1" stroke-width="1.2" />
+      <!-- Splash Plumes -->
+      <ellipse cx="-22" cy="-5" rx="13" ry="5.5" fill="#F0FDFA" fill-opacity="0.95" />
+      <ellipse cx="22" cy="-5" rx="13" ry="5.5" fill="#F0FDFA" fill-opacity="0.95" />
+      <circle cx="0" cy="-7" r="4" fill="#E0F2FE" />
+      <!-- Spray Arcs -->
+      <path d="M -12,-6 Q -25,-16 -38,-4" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill="none" />
+      <path d="M 12,-6 Q 25,-16 38,-4" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill="none" />
+      <!-- Concentric Ripple Waves -->
+      <ellipse cx="0" cy="5" rx="54" ry="11" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.85" fill="none" />
+      <ellipse cx="0" cy="5" rx="84" ry="16" stroke="#7DD3FC" stroke-width="1.2" stroke-opacity="0.65" fill="none" />
+    </g>
+
+    <!-- Surface Shimmer & Sparkles across water basins -->
+    <g fill="#FFFFFF">
+      <circle cx="380" cy="95" r="2.5" opacity="0.9" />
+      <circle cx="580" cy="108" r="3" opacity="0.95" />
+      <circle cx="630" cy="82" r="2.2" opacity="0.85" />
+      <circle cx="850" cy="102" r="2.8" opacity="0.95" />
+      <circle cx="920" cy="82" r="2.2" opacity="0.85" />
+      <circle cx="970" cy="98" r="2" opacity="0.8" />
+      <!-- Star Sparkle -->
+      <path d="M 580,104 L 582,108 L 586,110 L 582,112 L 580,116 L 578,112 L 574,110 L 578,108 Z" opacity="0.9" />
+      <path d="M 850,98 L 851,102 L 855,103 L 851,104 L 850,108 L 849,104 L 845,103 L 849,102 Z" opacity="0.9" />
+    </g>
+  </g>
+</svg>

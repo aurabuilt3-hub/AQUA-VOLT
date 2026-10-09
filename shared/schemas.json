@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AquaVoltSchemas",
+  "description": "Shared JSON schema contracts for AquaVolt IoT, Agents, Action Plan, Safety, and Impact.",
+  "definitions": {
+    "IoTTelemetry": {
+      "type": "object",
+      "properties": {
+        "solar_gen_kw": { "type": "number" },
+        "battery_soc_pct": { "type": "number" },
+        "grid_available": { "type": "boolean" },
+        "diesel_gen_running": { "type": "boolean" },
+        "pond_dissolved_oxygen_mg_l": { "type": "number" },
+        "pond_water_temp_c": { "type": "number" },
+        "aerators_total": { "type": "integer" },
+        "aerators_running": { "type": "integer" },
+        "aerator_soft_start_active": { "type": "boolean" },
+        "inrush_surge_kw": { "type": "number" },
+        "cold_room_temp_c": { "type": "number" },
+        "cold_room_target_temp_c": { "type": "number" },
+        "thermal_precooling_active": { "type": "boolean" },
+        "thermal_buffer_hours": { "type": "number" },
+        "pumps_kw": { "type": "number" },
+        "ice_plant_kw": { "type": "number" },
+        "processing_plant_kw": { "type": "number" }
+      },
+      "required": [
+        "solar_gen_kw", "battery_soc_pct", "grid_available",
+        "pond_dissolved_oxygen_mg_l", "pond_water_temp_c",
+        "cold_room_temp_c", "thermal_precooling_active"
+      ]
+    },
+    "IoTEvent": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "severity": { "type": "string", "enum": ["high", "med", "low"] },
+        "icon": { "type": "string" },
+        "description": { "type": "string" },
+        "telemetry": { "$ref": "#/definitions/IoTTelemetry" }
+      },
+      "required": ["id", "title", "category", "severity", "icon", "description", "telemetry"]
+    },
+    "AgentAnalysis": {
+      "type": "object",
+      "properties": {
+        "agent_id": { "type": "string" },
+        "agent_name": { "type": "string" },
+        "icon": { "type": "string" },
+        "status": { "type": "string", "enum": ["ok", "warning", "critical"] },
+        "findings": { "type": "array", "items": { "type": "string" } },
+        "key_metrics": { "type": "object" }
+      }
+    },
+    "ActionPlan": {
+      "type": "object",
+      "properties": {
+        "event_id": { "type": "string" },
+        "orchestrator_summary": { "type": "string" },
+        "keep_running": { "type": "array" },
+        "defer_or_reduce": { "type": "array" },
+        "energy_strategy": { "type": "array" },
+        "soft_start_rig": { "type": "object" },
+        "thermal_precool_rig": { "type": "object" },
+        "requires_human_approval": { "type": "boolean" },
+        "risk_score": { "type": "integer" }
+      }
+    },
+    "ImpactMetrics": {
+      "type": "object",
+      "properties": {
+        "energy_optimized_kwh": { "type": "number" },
+        "cost_avoided_inr": { "type": "number" },
+        "diesel_avoided_liters": { "type": "number" },
+        "co2_avoided_kg": { "type": "number" },
+        "product_protected_tons": { "type": "number" },
+        "critical_ops_safety_pct": { "type": "number" },
+        "aerator_inrush_suppressed_kw": { "type": "number" },
+        "thermal_energy_stored_kwh": { "type": "number" }
+      }
+    }
+  }
+}

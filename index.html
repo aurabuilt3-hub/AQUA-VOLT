@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AquaVolt — Smart Energy for Healthy Aquaculture</title>
+<style>
+:root{--navy:#10233f;--blue:#1d78d4;--orange:#ff7a21;--green:#19a66a;--red:#df4b55;--yellow:#f2b84b;--bg:#f6f8fb;--card:#fff;--muted:#6d7890;--border:#e5eaf1;--shadow:0 8px 24px rgba(21,43,70,.07)}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--navy)}button{font:inherit;cursor:pointer}.app{display:flex;min-height:100vh}.sidebar{width:225px;background:#fff;border-right:1px solid var(--border);padding:22px 14px;position:sticky;top:0;height:100vh}.brand{display:flex;gap:10px;align-items:center;padding:4px 8px 24px}.logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#ff8b32,#1d8bd5);color:white;display:grid;place-items:center;font-size:23px}.brand b{font-size:22px}.brand span{color:var(--orange)}.tagline{font-size:11px;color:var(--muted);margin-top:2px}.nav{display:grid;gap:6px}.nav button{border:0;background:transparent;text-align:left;padding:12px 13px;border-radius:10px;color:#263852;display:flex;gap:12px;align-items:center}.nav button.active{background:#fff0e7;color:#ef6c19;font-weight:700}.nav button:hover{background:#f5f7fa}.side-note{position:absolute;bottom:22px;left:14px;right:14px;padding:14px;border-radius:14px;background:#eefaf5;color:#167c53;font-size:12px}.main{flex:1;padding:22px 28px;max-width:1500px;margin:auto;width:100%}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.top h1{margin:0;font-size:25px}.top p{margin:4px 0 0;color:var(--muted);font-size:13px}.top-right{display:flex;gap:10px;align-items:center}.pill{padding:9px 12px;border:1px solid var(--border);border-radius:12px;background:#fff;font-size:12px}.avatar{width:34px;height:34px;border-radius:50%;background:#eaf3ff;display:grid;place-items:center;font-weight:700}.metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:16px}.metric{background:var(--card);border:1px solid var(--border);border-radius:15px;padding:14px;box-shadow:var(--shadow)}.metric small{color:var(--muted)}.metric strong{display:block;font-size:20px;margin-top:7px}.metric .ok{color:var(--green)}.metric .warn{color:var(--red)}.metric .bar{height:6px;background:#edf1f5;border-radius:99px;margin-top:10px;overflow:hidden}.metric .bar i{display:block;height:100%;background:#1db879;border-radius:99px}.grid{display:grid;grid-template-columns:1.12fr 1fr 1fr;gap:14px}.card{background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:17px}.card h2{font-size:17px;margin:0 0 4px}.sub{color:var(--muted);font-size:12px;margin-bottom:14px}.step{display:inline-grid;place-items:center;width:29px;height:29px;border-radius:50%;background:var(--orange);color:#fff;font-weight:800;margin-right:8px}.event-list{display:grid;gap:7px;max-height:535px;overflow:auto}.event{display:flex;align-items:center;justify-content:space-between;border:1px solid var(--border);background:#fff;border-radius:11px;padding:11px 12px;transition:.15s}.event:hover,.event.selected{border-color:#ff8d45;background:#fffaf7}.event .left{display:flex;align-items:center;gap:9px;font-size:13px}.risk{font-size:10px;font-weight:800;padding:5px 8px;border-radius:99px;white-space:nowrap}.high{color:#b7353e;background:#ffe9eb}.med{color:#956000;background:#fff2d4}.low{color:#08754a;background:#dcf8ea}.agents{display:grid;gap:9px}.agent{padding:12px;border-radius:11px;background:#f6f9fc;display:flex;justify-content:space-between;align-items:center}.agent b{font-size:13px}.agent small{display:block;color:var(--muted);margin-top:3px;font-size:11px}.check{width:23px;height:23px;border-radius:50%;background:#dcf8ea;color:#0a8a55;display:grid;place-items:center;font-weight:800}.orch{margin-top:9px;border:1px solid #ff9a59;background:#fff8f3;border-radius:12px;padding:13px}.state-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.state{padding:12px;background:#f7f9fb;border-radius:11px}.state b{font-size:12px}.kv{display:flex;justify-content:space-between;margin-top:7px;font-size:11px}.kv span:last-child{font-weight:800}.section-wide{grid-column:1/-1}.plan{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}.plan-col{padding:14px;border-radius:13px}.keep{background:#ebfaf3}.defer{background:#fff0f0}.strategy{background:#f3f6fa}.plan-col h3{font-size:13px;margin:0 0 10px}.item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(0,0,0,.08);font-size:12px}.item:last-child{border:0}.tag{font-size:10px;color:var(--muted)}.approval{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}.btn{border:1px solid var(--border);padding:13px;border-radius:11px;font-weight:800}.approve{background:#19ad6d;color:#fff;border-color:#19ad6d}.modify{background:#fff7ed;color:#a85b0b;border-color:#ffd09e}.reject{background:#fff0f1;color:#b53540;border-color:#ffc4c8}.impact{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}.impact-box{padding:12px;background:#f7f9fb;border-radius:11px}.impact-box strong{font-size:16px;display:block}.impact-box small{color:var(--muted);font-size:10px}.timeline{display:flex;justify-content:space-between;gap:10px;margin-top:12px;padding-top:12px;border-top:1px solid var(--border);font-size:10px;color:var(--muted)}.timeline b{color:var(--green)}.toast{position:fixed;right:22px;bottom:22px;background:var(--navy);color:#fff;padding:13px 16px;border-radius:11px;box-shadow:var(--shadow);display:none;font-size:13px}.copilot{position:fixed;right:22px;bottom:78px;width:320px;background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:0 18px 50px rgba(0,0,0,.15);display:none;overflow:hidden}.copilot .head{padding:12px 14px;background:#f7f9fb;font-weight:800}.copilot .body{padding:14px;font-size:12px;line-height:1.5}.fab{position:fixed;right:22px;bottom:20px;width:48px;height:48px;border:0;border-radius:50%;background:var(--orange);color:#fff;font-size:20px;box-shadow:0 8px 22px rgba(255,122,33,.35)}@media(max-width:1100px){.metrics{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.section-wide{grid-column:auto}.sidebar{width:190px}.impact{grid-template-columns:repeat(3,1fr)}}@media(max-width:760px){.sidebar{display:none}.main{padding:15px}.metrics{grid-template-columns:repeat(2,1fr)}.plan,.approval{grid-template-columns:1fr}.impact{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="logo">⚡</div><div><b>Aqua<span>Volt</span></b><div class="tagline">Smart Energy for Healthy Aquaculture</div></div></div>
+  <div class="nav">
+    <button class="active">🏠 <span>Home</span></button><button>⚡ <span>IoT Events</span></button><button>📋 <span>Action Plan</span></button><button>📊 <span>Live Status</span></button><button>🌱 <span>Impact</span></button><button>💬 <span>Ask AquaVolt</span></button><button>🕘 <span>History</span></button><button>⚙️ <span>Settings</span></button>
+  </div>
+  <div class="side-note">🌿 <b>Sustainable energy</b><br/>for healthier aquaculture</div>
+</aside>
+<main class="main">
+  <header class="top"><div><h1>AquaVolt Control Center</h1><p>Choose an incoming IoT event and let AquaVolt prepare a safe energy plan.</p></div><div class="top-right"><div class="pill">📍 Visakhapatnam, AP</div><div class="pill">📅 01 Oct 2026</div><div class="avatar">A</div></div></header>
+  <section class="metrics">
+    <div class="metric"><small>☀️ Solar Generation</small><strong>18.4 kW</strong><div class="bar"><i style="width:78%"></i></div></div>
+    <div class="metric"><small>🔋 Battery Level</small><strong>72%</strong><div class="bar"><i style="width:72%"></i></div></div>
+    <div class="metric"><small>⚡ Current Load</small><strong>11.2 kW</strong><div class="bar"><i style="width:58%"></i></div></div>
+    <div class="metric"><small>🔌 Grid Status</small><strong class="ok">Standby ●</strong></div>
+    <div class="metric"><small>🐟 Pond Status</small><strong class="ok">Healthy ●</strong></div>
+    <div class="metric"><small>❄️ Cold Chain</small><strong class="ok">4.1°C ●</strong></div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2><span class="step">1</span>Select an IoT Event</h2><div class="sub">Choose a field event. The click acts like incoming sensor data.</div>
+      <div id="events" class="event-list"></div>
+    </div>
+
+    <div class="card">
+      <h2><span class="step">2</span>AquaVolt Analysis</h2><div class="sub">Simple explanations of what each specialist is checking.</div>
+      <div class="agents" id="agents"></div>
+      <div class="orch"><b>🧠 AquaVolt Orchestrator</b><div id="orchText" class="sub" style="margin:5px 0 0">Waiting for an event…</div></div>
+    </div>
+
+    <div class="card">
+      <h2><span class="step">3</span>Current Situation</h2><div class="sub">Farm conditions linked to the selected event.</div>
+      <div class="state-grid">
+        <div class="state"><b>☀️ Energy</b><div class="kv"><span>Solar</span><span id="solar">18.4 kW</span></div><div class="kv"><span>Battery</span><span id="battery">72%</span></div><div class="kv"><span>Grid</span><span class="ok">Available</span></div></div>
+        <div class="state"><b>🐟 Pond Conditions</b><div class="kv"><span>DO</span><span id="do">5.4 mg/L</span></div><div class="kv"><span>Temp</span><span>28.1°C</span></div><div class="kv"><span>Aerators</span><span>4 / 4 ON</span></div></div>
+        <div class="state"><b>❄️ Cold Chain</b><div class="kv"><span>Room</span><span id="cold">4.1°C</span></div><div class="kv"><span>Target</span><span>2–5°C</span></div><div class="kv"><span>Product</span><span>2.8 tons</span></div></div>
+        <div class="state"><b>⚙️ Other Loads</b><div class="kv"><span>Pumps</span><span>2.1 kW</span></div><div class="kv"><span>Ice</span><span>3.0 kW</span></div><div class="kv"><span>Processing</span><span>4.0 kW</span></div></div>
+      </div>
+    </div>
+
+    <div class="card section-wide">
+      <h2><span class="step">4</span>AquaVolt Recommended Action Plan</h2><div class="sub">AquaVolt protects the most important operations first.</div>
+      <div class="plan">
+        <div class="plan-col keep"><h3>🟢 Keep Running</h3><div class="item"><span>🐟 Pond Aerators<br><span class="tag">Critical for oxygen</span></span><b>6.4 kW</b></div><div class="item"><span>❄️ Cold Storage<br><span class="tag">Protect product</span></span><b>3.2 kW</b></div><div class="item"><span>💧 Water Pumps<br><span class="tag">Water circulation</span></span><b>2.1 kW</b></div></div>
+        <div class="plan-col defer"><h3>🟠 Defer / Reduce</h3><div class="item"><span>🧊 Ice Production<br><span class="tag">Wait 45 minutes</span></span><b>⏸</b></div><div class="item"><span>🏭 Processing<br><span class="tag">Pause for now</span></span><b>⏸</b></div><div class="item"><span>💡 Non-essential Lighting<br><span class="tag">Reduce 50%</span></span><b>50%</b></div></div>
+        <div class="plan-col strategy"><h3>⚡ Energy Strategy</h3><div class="item"><span>☀️ Use solar</span><b>Critical loads</b></div><div class="item"><span>🔋 Battery</span><b>25% reserve</b></div><div class="item"><span>🔌 Grid</span><b>Standby</b></div><div class="item"><span>⛽ Diesel</span><b>Not needed</b></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><span class="step">5</span>Your Approval</h2><div class="sub">You stay in control of important decisions.</div>
+      <div class="approval"><button class="btn approve" onclick="approve()">✓ Approve Plan</button><button class="btn modify" onclick="modify()">✎ Modify</button><button class="btn reject" onclick="rejectPlan()">✕ Reject</button></div>
+      <div id="approvalStatus" style="margin-top:12px;font-size:12px;color:var(--muted)">Human review required for high-risk events.</div>
+    </div>
+
+    <div class="card section-wide">
+      <h2><span class="step">6</span>Expected Impact</h2><div class="sub">PoC estimates based on simulated farm data.</div>
+      <div class="impact"><div class="impact-box"><strong>8.4 kWh</strong><small>Energy optimized</small></div><div class="impact-box"><strong>₹486</strong><small>Cost avoided</small></div><div class="impact-box"><strong>2.1 L</strong><small>Diesel avoided</small></div><div class="impact-box"><strong>10.8 kg</strong><small>CO₂ avoided</small></div><div class="impact-box"><strong>2.8 tons</strong><small>Product protected</small></div><div class="impact-box"><strong>100%</strong><small>Critical operations safe</small></div></div>
+      <div class="timeline"><span><b>●</b> Event received</span><span><b>●</b> Agents analyzed</span><span><b>●</b> Plan generated</span><span><b>●</b> Human approved</span><span><b>●</b> Actions executed</span></div>
+    </div>
+  </section>
+</main>
+<button class="fab" onclick="toggleCopilot()">💬</button>
+<div class="copilot" id="copilot"><div class="head">🤖 Ask AquaVolt</div><div class="body"><b>Why did you defer ice production?</b><p>Ice production is flexible during the current energy shortage. AquaVolt protects pond aeration and cold storage first because they have higher immediate operational risk.</p></div></div>
+<div class="toast" id="toast"></div>
+<script>
+const events=[
+['☀️','Solar generation dropped 60%','high','High Risk','solar'],['🔋','Battery below 20%','high','High Risk','battery'],['🐟','Pond dissolved oxygen falling','high','High Risk','oxygen'],['❄️','Cold room temperature rising','high','High Risk','cold'],['⚡','Grid failure detected','high','High Risk','grid'],['🌡️','Pond temperature above threshold','med','Medium Risk','temp'],['🌀','Aerator failure detected','med','Medium Risk','aerator'],['☀️','Solar generation normal','low','No Risk','normal'],['🔋','Battery healthy','low','No Risk','healthy'],['❄️','Cold chain stable','low','No Risk','stable']];
+const agentDefs=[['🐟','Pond Agent','Checking pond health and aeration needs…'],['⚡','Energy Agent','Evaluating available renewable energy…'],['❄️','Cold Chain Agent','Checking refrigeration and product safety…'],['🛡️','Risk Agent','Assessing operational and business risk…']];
+let current='solar';
+const eventsEl=document.getElementById('events');
+function renderEvents(){eventsEl.innerHTML=events.map((e,i)=>`<button class="event ${e[4]===current?'selected':''}" onclick="selectEvent('${e[4]}',${i})"><span class="left"><span style="font-size:18px">${e[0]}</span>${e[1]}</span><span class="risk ${e[2]}">${e[3]}</span></button>`).join('')}
+function renderAgents(active=false){document.getElementById('agents').innerHTML=agentDefs.map((a,i)=>`<div class="agent"><div><b>${a[0]} ${a[1]}</b><small>${active?'Analyzing…':a[2]}</small></div><div class="check">${active?'…':'✓'}</div></div>`).join('')}
+function selectEvent(key){current=key;renderEvents(); const map={solar:['4.1 kW','38%','4.2 mg/L','4.3°C'],battery:['10.1 kW','18%','4.6 mg/L','4.1°C'],oxygen:['12.2 kW','52%','2.9 mg/L','4.1°C'],cold:['11.5 kW','48%','4.8 mg/L','6.2°C'],grid:['9.2 kW','62%','4.4 mg/L','4.2°C'],temp:['13.1 kW','56%','4.7 mg/L','4.2°C'],aerator:['12.8 kW','54%','3.1 mg/L','4.2°C'],normal:['18.4 kW','72%','5.4 mg/L','4.1°C'],healthy:['17.1 kW','82%','5.2 mg/L','4.0°C'],stable:['18.0 kW','76%','5.5 mg/L','4.1°C']}[key];document.getElementById('solar').textContent=map[0];document.getElementById('battery').textContent=map[1];document.getElementById('do').textContent=map[2];document.getElementById('cold').textContent=map[3];renderAgents(true);document.getElementById('orchText').textContent='Combining specialist insights and preparing a safe action plan…';setTimeout(()=>{renderAgents(false);document.getElementById('orchText').textContent='Plan ready. Review the recommendation below.'},550);document.getElementById('approvalStatus').textContent=(key==='normal'||key==='healthy'||key==='stable')?'Low-risk event: AquaVolt can optimize automatically.':'Human review required for this event.';}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.style.display='block';setTimeout(()=>t.style.display='none',2200)}
+function approve(){document.getElementById('approvalStatus').innerHTML='<b style="color:#14945f">✓ Approved.</b> AquaVolt executed the recommended plan in the PoC.';toast('Plan approved and executed');}
+function modify(){document.getElementById('approvalStatus').innerHTML='<b style="color:#a85b0b">✎ Modify mode.</b> Adjust load priorities before execution.';toast('Modify mode enabled');}
+function rejectPlan(){document.getElementById('approvalStatus').innerHTML='<b style="color:#c13b47">✕ Rejected.</b> Current state remains unchanged.';toast('Plan rejected');}
+function toggleCopilot(){const c=document.getElementById('copilot');c.style.display=c.style.display==='block'?'none':'block'}
+renderEvents();renderAgents();
+</script>
+</body></html>

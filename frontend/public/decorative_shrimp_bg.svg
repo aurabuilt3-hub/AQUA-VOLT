@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" fill="none">
+  <defs>
+    <linearGradient id="shrimpGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5EEAD4" stop-opacity="1" />
+      <stop offset="50%" stop-color="#14B8A6" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0F766E" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="shellShine" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1" />
+      <stop offset="50%" stop-color="#CCFBF1" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#2DD4BF" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="finGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#99F6E4" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0D9488" stop-opacity="0.6" />
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(60, 30) rotate(-10, 250, 250)">
+    <!-- Long Antennal Flagella (Sweeping Curves) -->
+    <path d="M 210,140 C 230,70 300,20 430,15 C 500,10 550,40 570,80" stroke="#CCFBF1" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.9" />
+    <path d="M 205,145 C 240,90 340,50 490,60 C 540,65 580,100 590,150" stroke="#5EEAD4" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8" />
+    <path d="M 195,155 C 220,120 300,100 410,110 C 470,115 510,150 530,190" stroke="#2DD4BF" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.75" />
+
+    <!-- Rostrum (Serrated Head Horn) -->
+    <path d="M 180,185 L 100,120 Q 125,140 148,158 Q 138,148 165,170 Q 155,160 180,185 Z" fill="url(#shellShine)" stroke="#FFFFFF" stroke-width="2.5" />
+    <!-- Rostrum teeth -->
+    <polygon points="120,135 125,128 134,138" fill="#FFFFFF" />
+    <polygon points="135,145 140,138 149,148" fill="#FFFFFF" />
+    <polygon points="150,155 155,148 164,158" fill="#FFFFFF" />
+    <polygon points="165,165 170,158 178,168" fill="#FFFFFF" />
+
+    <!-- Cephalothorax / Carapace (Head Shield) -->
+    <path d="M 180,180 C 210,155 265,165 295,190 C 312,208 316,238 305,270 C 290,298 240,310 198,292 C 172,280 158,248 164,216 C 168,196 174,186 180,180 Z" fill="url(#shrimpGlow)" stroke="#FFFFFF" stroke-width="4" />
+    
+    <!-- Carapace Highlights and Grooves -->
+    <path d="M 198,195 C 230,182 272,205 285,238" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.85" />
+    <path d="M 182,228 C 210,220 248,235 258,268" stroke="#CCFBF1" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.75" />
+    <!-- Eye with highlight -->
+    <circle cx="185" cy="192" r="9" fill="#042F2E" stroke="#5EEAD4" stroke-width="3" />
+    <circle cx="182" cy="189" r="3.5" fill="#FFFFFF" />
+
+    <!-- Walking Legs (Pereiopods) extending forward and down -->
+    <g stroke="#CCFBF1" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9">
+      <path d="M 205,280 L 188,322 L 158,348 L 130,354" />
+      <path d="M 225,285 L 214,332 L 188,368 L 160,378" />
+      <path d="M 245,285 L 238,338 L 218,384 L 195,404" />
+      <path d="M 265,280 L 268,332 L 258,378 L 240,414" />
+      <path d="M 285,270 L 298,322 L 304,368 L 290,410" />
+    </g>
+
+    <!-- Abdominal Somite 1 -->
+    <path d="M 285,195 C 318,205 338,225 348,255 C 342,282 322,302 290,296 C 274,290 268,268 280,242 Z" fill="url(#shrimpGlow)" stroke="#FFFFFF" stroke-width="3.5" />
+    <path d="M 296,215 C 322,230 332,252 332,278" stroke="#CCFBF1" stroke-width="2" fill="none" opacity="0.8" />
+
+    <!-- Abdominal Somite 2 (Overlapping) -->
+    <path d="M 330,218 C 368,238 388,268 388,305 C 378,332 346,342 320,326 C 304,315 308,288 325,262 Z" fill="url(#shrimpGlow)" stroke="#FFFFFF" stroke-width="3.5" />
+    <path d="M 346,244 C 372,264 378,290 368,316" stroke="#CCFBF1" stroke-width="2" fill="none" opacity="0.8" />
+
+    <!-- Abdominal Somite 3 (Hump Arch) -->
+    <path d="M 370,262 C 412,292 428,334 418,370 C 402,398 366,398 344,376 C 328,354 338,328 365,302 Z" fill="url(#shrimpGlow)" stroke="#FFFFFF" stroke-width="3.5" />
+    <path d="M 386,294 C 412,324 412,356 396,378" stroke="#CCFBF1" stroke-width="2" fill="none" opacity="0.8" />
+
+    <!-- Abdominal Somite 4 -->
+    <path d="M 395,334 C 438,368 442,410 426,442 C 406,458 374,448 364,422 C 354,395 368,368 395,344 Z" fill="url(#shrimpGlow)" stroke="#FFFFFF" stroke-width="3.5" />
+
+    <!-- Abdominal Somite 5 -->
+    <path d="M 410,394 C 448,428 442,470 416,496 C 390,506 368,486 368,460 C 368,434 384,414 410,394 Z" fill="url(#shrimpGlow)" stroke="#FFFFFF" stroke-width="3.5" />
+
+    <!-- Abdominal Somite 6 -->
+    <path d="M 405,454 C 432,485 422,522 390,542 C 364,548 348,526 354,500 C 360,478 380,464 405,454 Z" fill="url(#shrimpGlow)" stroke="#FFFFFF" stroke-width="3.5" />
+
+    <!-- Swimmerets (Pleopods) along the abdomen -->
+    <g fill="url(#finGlow)" stroke="#5EEAD4" stroke-width="2.5" opacity="0.95">
+      <path d="M 305,320 Q 298,354 276,370 Q 294,358 316,330 Z" />
+      <path d="M 335,345 Q 328,384 306,406 Q 324,390 346,356 Z" />
+      <path d="M 365,390 Q 358,430 336,452 Q 354,436 376,402 Z" />
+      <path d="M 385,440 Q 378,480 356,502 Q 374,486 396,452 Z" />
+    </g>
+
+    <!-- Tail Fan: Telson and Uropods -->
+    <g fill="url(#shellShine)" stroke="#FFFFFF" stroke-width="3" opacity="0.95">
+      <!-- Center Telson (Spike) -->
+      <path d="M 370,520 L 348,586 L 332,525 Z" fill="url(#shrimpGlow)" />
+      <!-- Left Inner Uropod -->
+      <path d="M 365,515 Q 328,558 300,580 Q 328,542 355,510 Z" fill="url(#finGlow)" />
+      <!-- Left Outer Uropod -->
+      <path d="M 360,510 Q 306,542 268,558 Q 306,526 348,505 Z" fill="url(#finGlow)" />
+      <!-- Right Inner Uropod -->
+      <path d="M 380,515 Q 380,568 376,595 Q 386,552 386,515 Z" fill="url(#finGlow)" />
+      <!-- Right Outer Uropod -->
+      <path d="M 385,510 Q 408,554 425,580 Q 408,538 390,505 Z" fill="url(#finGlow)" />
+    </g>
+
+    <!-- Luminous Bioluminescent Water Accents -->
+    <circle cx="240" cy="150" r="4" fill="#FFFFFF" opacity="0.9" />
+    <circle cx="350" cy="200" r="3.5" fill="#FFFFFF" opacity="0.9" />
+    <circle cx="420" cy="280" r="4" fill="#5EEAD4" opacity="0.95" />
+    <circle cx="450" cy="380" r="3" fill="#FFFFFF" opacity="0.9" />
+    <circle cx="280" cy="350" r="3.5" fill="#5EEAD4" opacity="0.9" />
+    <circle cx="210" cy="380" r="3" fill="#FFFFFF" opacity="0.9" />
+  </g>
+</svg>

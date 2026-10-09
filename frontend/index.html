@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AquaVolt — Enterprise AI Energy Orchestration Console</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+            },
+            colors: {
+              ocean: {
+                950: '#0B242D',
+                900: '#123B4A',
+                800: '#164E5D',
+                700: '#087F8C',
+                600: '#18A999',
+                500: '#36CFC0',
+                200: '#A7F3D0',
+                100: '#E6F7F3',
+                50: '#F6FAFC'
+              },
+              command: {
+                950: '#060B14',
+                900: '#0B132B',
+                850: '#0F1A36',
+                800: '#142245',
+                700: '#1C315E',
+                600: '#25427D'
+              },
+              petrol: {
+                900: '#042F2E',
+                800: '#115E59',
+                700: '#0F766E',
+                600: '#0D9488',
+                500: '#14B8A6',
+                400: '#2DD4BF',
+                300: '#5EEAD4',
+                100: '#CCFBF1',
+                50: '#F0FDFA'
+              },
+              surface: {
+                base: '#F6FAFC',
+                card: '#FFFFFF',
+                subtle: '#F8FAFC',
+                border: '#E2E8F0',
+                borderDark: '#CBD5E1'
+              }
+            },
+            boxShadow: {
+              'subtle': '0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.05)',
+              'panel': '0 4px 6px -1px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.04)',
+              'elevated': '0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04)',
+              'nav': '4px 0 24px 0 rgba(11, 19, 43, 0.15)'
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-[#F1F5F9] text-[#0F172A] font-sans antialiased selection:bg-[#0D9488] selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
