@@ -40,7 +40,7 @@ _in_flight_results: Dict[str, CoordinatedActionPlan] = {}
 _last_request_time = 0.0
 _MIN_REQUEST_INTERVAL = 1.0  # seconds between outbound API calls to Gemini
 
-MODEL_NAME = "gemini-2.5-flash"
+MODEL_NAME = "gemini-2.0-flash"
 GEMINI_ENDPOINT_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL_NAME}:generateContent"
 
 def get_api_key() -> Optional[str]:
@@ -137,38 +137,44 @@ Required JSON Schema:
         }
     }
 
-    url = f"{GEMINI_ENDPOINT_URL}?key={api_key}"
-    
-    # Retry logic (max 1 retry)
-    for attempt in range(2):
-        try:
-            with httpx.Client(timeout=4.0) as client:
-                response = client.post(url, json=payload, headers={"Content-Type": "application/json"})
-                if response.status_code == 200:
-                    data = response.json()
-                    candidates = data.get("candidates", [])
-                    if candidates and "content" in candidates[0]:
-                        parts = candidates[0]["content"].get("parts", [])
-                        if parts and "text" in parts[0]:
-                            text = parts[0]["text"]
-                            return json.loads(text)
-                elif response.status_code == 429:
-                    raise Exception("Gemini API Rate Limit (429 Exceeded)")
-                elif response.status_code in (500, 502, 503, 504) and attempt == 0:
-                    time.sleep(0.5)
-                    continue
-                else:
-                    raise Exception(f"Gemini API returned status {response.status_code}")
-        except httpx.TimeoutException:
-            raise Exception("Gemini API request timed out after 4 seconds")
-        except json.JSONDecodeError:
-            raise Exception("Gemini API returned malformed JSON")
-        except Exception as e:
-            if attempt == 1:
-                raise e
-            time.sleep(0.5)
+    models_to_try = [MODEL_NAME, "gemini-1.5-flash"]
+    last_err = None
 
-    raise Exception("Gemini API failed after max retries")
+    for m in models_to_try:
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent?key={api_key}"
+        for attempt in range(2):
+            try:
+                with httpx.Client(timeout=4.0) as client:
+                    response = client.post(url, json=payload, headers={"Content-Type": "application/json"})
+                    if response.status_code == 200:
+                        data = response.json()
+                        candidates = data.get("candidates", [])
+                        if candidates and "content" in candidates[0]:
+                            parts = candidates[0]["content"].get("parts", [])
+                            if parts and "text" in parts[0]:
+                                text = parts[0]["text"]
+                                return json.loads(text)
+                    elif response.status_code == 429:
+                        raise Exception("Gemini API Rate Limit (429 Exceeded)")
+                    elif response.status_code == 404:
+                        last_err = f"Model {m} returned 404"
+                        break
+                    elif response.status_code in (500, 502, 503, 504) and attempt == 0:
+                        time.sleep(0.5)
+                        continue
+                    else:
+                        raise Exception(f"Gemini API returned status {response.status_code}")
+            except httpx.TimeoutException:
+                last_err = "Gemini API request timed out after 4 seconds"
+            except json.JSONDecodeError:
+                last_err = "Gemini API returned malformed JSON"
+            except Exception as e:
+                last_err = str(e)
+                if attempt == 1:
+                    break
+                time.sleep(0.5)
+
+    raise Exception(last_err or "Gemini API failed after max retries")
 
 def orchestrate_with_ai_gateway(
     event: IoTEvent,
